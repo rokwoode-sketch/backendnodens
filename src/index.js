@@ -47,13 +47,23 @@ app.get('/api/posts/:slug', async (req, res) => {
   }
 });
 
-async function start() {
-  if (process.env.DATABASE_URL) {
-    await initSchema();
-    console.log('Database connected');
-  } else {
-    console.warn('No DATABASE_URL — API will return errors');
+async function connectDb(retries = 10) {
+  for (let i = 1; i <= retries; i++) {
+    try {
+      await initSchema();
+      console.log('Database connected');
+      return true;
+    } catch (err) {
+      console.warn(`DB connect attempt ${i}/${retries}: ${err.message}`);
+      await new Promise((r) => setTimeout(r, 3000));
+    }
   }
+  console.warn('No DATABASE_URL — API will return errors');
+  return false;
+}
+
+async function start() {
+  if (process.env.DATABASE_URL) await connectDb();
   app.listen(PORT, '0.0.0.0', () => console.log(`API running on port ${PORT}`));
 }
 
