@@ -95,7 +95,14 @@ async function connectDb() {
 async function start() {
   app.listen(PORT, '0.0.0.0', () => console.log(`API running on port ${PORT}`));
   if (process.env.DATABASE_URL || process.env.DB_PASSWORD) {
-    connectDb().catch((err) => console.warn('Background DB connect failed:', err.message));
+    connectDb()
+      .then(async (ok) => {
+        if (ok) {
+          const { default: runSeed } = await import('./seed-runtime.js');
+          await runSeed();
+        }
+      })
+      .catch((err) => console.warn('Background DB connect failed:', err.message));
   }
 }
 
