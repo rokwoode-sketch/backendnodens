@@ -1,8 +1,10 @@
+import { siteImages } from './siteImages.js';
+
 export const posts = [
   {
     slug: 'hair-transplant',
     category: 'Hair Transplant',
-    image_url: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&h=630&fit=crop',
+    image_url: siteImages.hairFue,
     translations: {
       en: {
         title: 'Hair Transplant in Istanbul, Turkey: Complete Patient Guide 2026',
@@ -18,6 +20,14 @@ export const posts = [
           { type: 'p', text: 'At NodensCare, FUE Sapphire hair transplant packages start from €1,500 ($1,800) all-inclusive. This typically includes the surgical procedure, PRP therapy, accommodation, transfers, and aftercare kit. Comparable procedures in the UK cost £8,000–£15,000; in the USA $12,000–$25,000. The price difference reflects Turkey\'s lower operational costs, not lower quality — surgeons train at the same international conferences and use identical equipment.' },
           { type: 'h2', text: 'Recovery Timeline: What to Expect' },
           { type: 'p', text: 'Most patients return home 3 days after surgery. Days 1–14 involve initial healing and redness subsiding. Months 1–3 bring "shock loss" — a normal phase where transplanted hairs shed before regrowing. Visible new growth begins at month 3–4, with final density achieved at 10–12 months. Our coordinators provide a structured wash protocol and monthly photo check-ins for 12 months.' },
+          { type: 'h2', text: 'FUE Sapphire vs DHI Choi Pen: Which Is Right for You?' },
+          { type: 'p', text: 'FUE Sapphire is ideal for patients needing 3,000–5,000 grafts in a single session — particularly those with advanced hair loss (Norwood IV–VI). The sapphire blade creates ultra-fine V-shaped channels that heal faster and allow higher density per square centimetre. DHI Choi Pen is preferred for hairline refinement, adding density among existing hair without shaving, and cases requiring precise angle control. Many patients combine both: FUE for the crown and DHI for the frontal hairline.' },
+          { type: 'h2', text: 'PRP and Exosome Therapy: Non-Surgical Options' },
+          { type: 'p', text: 'PRP (Platelet-Rich Plasma) uses growth factors from your own blood to strengthen existing follicles, slow shedding, and support graft survival after transplant. Exosome therapy represents the next generation — extracellular vesicles that activate dormant follicles at the cellular level. Both are available as standalone treatments or post-transplant protocols at NodensCare partner clinics in Istanbul.' },
+          { type: 'h2', text: 'Choosing a Safe Hair Clinic in Istanbul' },
+          { type: 'ul', items: ['Verify JCI hospital accreditation — not just clinic branding', 'Confirm surgeon credentials and university affiliation', 'Request a free virtual hair analysis before booking flights', 'Ensure the package includes PRP, accommodation, transfers, and 12-month follow-up', 'Avoid clinics offering unlimited grafts at suspiciously low prices — quality has a floor'] },
+          { type: 'h2', text: 'Travel Checklist for International Hair Patients' },
+          { type: 'p', text: 'Day 1: Arrival, airport pickup, consultation and hairline design. Day 2: Procedure under local anesthesia (6–8 hours). Day 3: First wash, post-op briefing, medical clearance. Day 4: Fly home. Pack loose-fitting shirts (button-front), a neck pillow for the flight, and any regular medications. Avoid alcohol and blood thinners for 7 days pre-surgery.' },
         ],
         faq: [
           { q: 'Is a hair transplant in Turkey safe?', a: 'Yes, when performed at JCI-accredited hospitals with board-certified surgeons. JCI accreditation requires the same safety protocols as top US hospitals. NodensCare only partners with university-affiliated facilities that meet this standard.' },
@@ -82,7 +92,7 @@ export const posts = [
   {
     slug: 'dental',
     category: 'Dental',
-    image_url: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=630&fit=crop',
+    image_url: siteImages.hollywoodSmile,
     translations: {
       en: {
         title: 'Dental Tourism in Istanbul: Hollywood Smile, Implants & Full Guide',
@@ -97,6 +107,14 @@ export const posts = [
           { type: 'p', text: 'Digital Smile Design allows you to preview your new smile on screen before any enamel is touched. Our prosthodontists photograph your face, analyze proportions, and design veneers matched to your skin tone, lip line, and facial symmetry. You approve the design digitally before treatment begins — eliminating uncertainty about your final result.' },
           { type: 'h2', text: 'Is Dental Treatment in Turkey Safe?' },
           { type: 'p', text: 'NodensCare partners exclusively with JCI-accredited dental hospitals using Nobel Biocare and Straumann implant systems — the same brands used by top prosthodontists in London, Paris, and New York. All procedures are professor-supervised, and every package includes a written warranty on materials.' },
+          { type: 'h2', text: 'Hollywood Smile: Step-by-Step Process' },
+          { type: 'p', text: 'Day 1: Consultation, intraoral scan, facial photography, and Digital Smile Design preview — you approve your new smile on screen before any treatment begins. Days 2–3: Minimal enamel preparation and temporary veneers fitted. Days 4–5: Master ceramist fabricates E-max or zirconia veneers. Day 6: Final bonding, bite adjustment, and polish. You leave Istanbul with a fully transformed, natural-looking smile.' },
+          { type: 'h2', text: 'All-on-6 vs All-on-4: Understanding Full-Arch Implants' },
+          { type: 'p', text: 'All-on-6 uses six strategically angled implants per arch for superior load distribution and long-term stability — particularly important for patients with bone loss or bruxism. All-on-4 uses four implants and may be suitable for selected cases with adequate bone. NodensCare prosthodontists recommend the optimal approach after 3D CT scan analysis. Both protocols include an immediate fixed temporary bridge on surgery day.' },
+          { type: 'h2', text: 'Zirconia Crowns vs E-max Veneers' },
+          { type: 'p', text: 'E-max (lithium disilicate) veneers are ultra-thin and ideal for aesthetic smile makeovers — they mimic natural enamel translucency. Zirconia crowns offer maximum strength for molars, implant-supported restorations, and patients with heavy bite forces. Many Hollywood Smile cases combine both: E-max for visible front teeth and zirconia for posterior strength.' },
+          { type: 'h2', text: 'Dental Tourism Cost Comparison (2026)' },
+          { type: 'ul', items: ['Hollywood Smile (20 veneers): Istanbul €3,200 vs UK £12,000–£18,000 vs USA $20,000–$30,000', 'Single implant + crown: Istanbul from €800 vs UK £2,500–£3,500', 'All-on-6 per arch: Istanbul €6,200 vs UK £12,000–£16,000', 'Zirconia crown: Istanbul €200–350 vs UK £600–£900'] },
         ],
         faq: [
           { q: 'How long does a Hollywood Smile take in Istanbul?', a: 'A full Hollywood Smile typically requires 5–7 days in Istanbul: Day 1 consultation and DSD preview, Days 2–4 preparation and veneer fabrication, Day 5 final fitting and polish.' },
@@ -154,7 +172,7 @@ export const posts = [
   {
     slug: 'plastic-surgery',
     category: 'Plastic Surgery',
-    image_url: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&h=630&fit=crop',
+    image_url: siteImages.rhinoplastyProc,
     translations: {
       en: {
         title: 'Plastic Surgery in Istanbul: Rhinoplasty, BBL & Aesthetic Guide 2026',
@@ -169,6 +187,16 @@ export const posts = [
           { type: 'p', text: 'Every rhinoplasty and major body procedure at NodensCare begins with 3D digital simulation. You review and approve the projected outcome on screen before entering the operating room. This eliminates guesswork and ensures you and your surgeon share the same vision for your result.' },
           { type: 'h2', text: 'Safety Standards for International Patients' },
           { type: 'p', text: 'All procedures are performed in JCI-accredited hospitals under professor supervision. NodensCare enforces a 10-day Istanbul safety protocol: pre-operative blood work, anesthesia review, post-operative nursing care, and structured follow-up before you fly home.' },
+          { type: 'h2', text: 'Rhinoplasty in Istanbul: Techniques Explained' },
+          { type: 'p', text: 'Open rhinoplasty provides full surgical visibility for complex structural changes — dorsal hump reduction, tip refinement, and septal correction. Closed rhinoplasty uses internal incisions only, leaving no visible external scar — ideal for tip work and ethnic preservation cases. Revision rhinoplasty requires specialist expertise; NodensCare connects patients with surgeons who perform 300+ rhinoplasties annually and use 3D simulation before every case.' },
+          { type: 'h2', text: 'Liposuction 360° and BBL: Body Contouring Guide' },
+          { type: 'p', text: 'Liposuction 360° removes fat from the abdomen, flanks, waist, and back in one session using Vaser ultrasound technology. Harvested fat is purified and transferred to the buttocks in a BBL (Brazilian Butt Lift) — no implants, only your own tissue. Safety protocols require subcutaneous-only fat transfer. Combined Lipo 360 + BBL packages at NodensCare start from €5,300 with a mandatory 10-night Istanbul stay.' },
+          { type: 'h2', text: 'Mommy Makeover: What Is Included?' },
+          { type: 'p', text: 'A Mommy Makeover typically combines abdominoplasty (tummy tuck), breast surgery (lift, augmentation, or reduction), and liposuction in a single anaesthesia session. It addresses post-pregnancy changes: separated abdominal muscles (diastasis recti), excess skin, and breast volume loss. Recovery requires 10–14 days in Istanbul. Not all patients are candidates for combined surgery — your surgeon assesses safe anaesthesia time limits during consultation.' },
+          { type: 'h2', text: 'Facelift, Blepharoplasty, and Neck Lift' },
+          { type: 'p', text: 'Deep plane SMAS facelift repositions deeper facial structures for natural, long-lasting rejuvenation (10–15 years). Blepharoplasty removes excess eyelid skin and fat for a rested appearance. Neck lift (platysmaplasty) addresses jowling and submental fat. These procedures are frequently combined for full facial harmony.' },
+          { type: 'h2', text: 'Plastic Surgery Cost Comparison (2026)' },
+          { type: 'ul', items: ['Rhinoplasty: Istanbul €3,500 vs UK £6,000–£10,000', 'Liposuction 360°: Istanbul €2,800 vs UK £5,000–£8,000', 'BBL + Lipo 360: Istanbul €5,300 vs USA $12,000–$18,000', 'Facelift: Istanbul €4,200 vs UK £8,000–£12,000', 'Mommy Makeover: Istanbul from €7,500 vs USA $15,000–$25,000'] },
         ],
         faq: [
           { q: 'Is plastic surgery in Turkey safe?', a: 'Yes, at JCI-accredited hospitals with board-certified surgeons. JCI is the same accreditation used by top US hospitals. NodensCare adds professor-level supervision and a structured 10-day safety protocol.' },
@@ -226,7 +254,7 @@ export const posts = [
   {
     slug: 'complex-treatments',
     category: 'Complex',
-    image_url: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?w=1200&h=630&fit=crop',
+    image_url: siteImages.cancerTreatment,
     translations: {
       en: {
         title: 'Complex Medical Treatments in Istanbul: Cancer, Transplant & IVF Guide',
@@ -241,6 +269,16 @@ export const posts = [
           { type: 'p', text: 'Turkey performs over 5,000 organ transplants annually, ranking among the top 5 countries globally. Liver, kidney, and bone marrow transplants are performed at JCI-accredited transplant centers with experienced surgical teams. International patients must meet strict medical eligibility criteria and legal requirements for living-donor transplants.' },
           { type: 'h2', text: 'IVF & Fertility Treatment' },
           { type: 'p', text: 'Istanbul fertility centers offer IVF, ICSI, PGD/PGS genetic screening, egg donation, and EmbryoScope time-lapse monitoring. Success rates at top clinics exceed 55% per cycle for patients under 35. Professor-reproductive endocrinologists supervise all protocols.' },
+          { type: 'h2', text: 'Cancer Treatment: Immunotherapy and Precision Medicine' },
+          { type: 'p', text: 'Modern oncology at NodensCare partner hospitals includes immunotherapy (checkpoint inhibitors), targeted smart drugs matched to tumour mutations, CyberKnife and TrueBeam STx radiotherapy, and surgical oncology. Every case is reviewed by a multidisciplinary Tumor Board before treatment begins. PET-CT staging and molecular profiling are completed within 48–72 hours of arrival in Istanbul.' },
+          { type: 'h2', text: 'Organ Transplantation: Kidney and Liver' },
+          { type: 'p', text: 'Prof. Dr. Halil Erbiş leads one of Turkey\'s most experienced transplant programmes with 2,400+ successful procedures. The 48-hour evaluation protocol includes blood typing, tissue matching, MRI/CT imaging, cardiac assessment, and Multidisciplinary Council review. Living-donor kidney and liver transplantation are available for medically eligible international patients meeting Turkish legal requirements.' },
+          { type: 'h2', text: 'IVF with PGD/PGS: Genetic Screening Explained' },
+          { type: 'p', text: 'Preimplantation Genetic Diagnosis (PGD) screens embryos for specific genetic conditions. Preimplantation Genetic Screening (PGS) identifies chromosomally normal embryos — improving pregnancy rates and reducing miscarriage risk. Next Generation Sequencing (NGS) technology is used at partner IVF centres. Egg and embryo donation programmes comply with Turkish Ministry of Health regulations.' },
+          { type: 'h2', text: 'Why International Patients Choose Istanbul for Complex Care' },
+          { type: 'ul', items: ['Professor-led multidisciplinary teams at JCI-accredited university hospitals', '50–70% cost savings vs US/UK for oncology, transplant, and IVF', 'No waiting lists for PET-CT, MRI, and molecular diagnostics', 'Same FDA/EMA-approved drugs and immunotherapy agents', 'Dedicated medical coordinators for continuity of care at home'] },
+          { type: 'h2', text: 'Important: This Is Not Medical Advice' },
+          { type: 'p', text: 'The information in this guide is educational only. Treatment decisions must be made with a qualified physician who has reviewed your complete medical history, imaging, and pathology. NodensCare facilitates access to specialist care but does not practice medicine. For emergencies, contact your local emergency services immediately.' },
         ],
         faq: [
           { q: 'Is cancer treatment in Turkey as good as in Europe?', a: 'Top Turkish university hospitals use the same treatment protocols, equipment, and drug regimens as European cancer centers. JCI accreditation ensures equivalent safety standards. NodensCare connects patients only with professor-led oncology teams.' },
@@ -306,6 +344,132 @@ export const posts = [
           { q: '¿Es esto consejo médico?', a: 'No. Solo informativo. Consulte a un médico calificado para decisiones de tratamiento.' },
         ],
       },
+    },
+  },
+  {
+    slug: 'ivf-treatment',
+    category: 'Complex',
+    image_url: siteImages.ivfTreatment,
+    translations: {
+      en: {
+        title: 'IVF Treatment in Istanbul: PGD/PGS, ICSI & Fertility Guide 2026',
+        meta_title: 'IVF Istanbul Turkey | PGD PGS ICSI Fertility Guide — NodensCare',
+        meta_description: 'Complete IVF guide for Istanbul: ICSI, PGD/PGS genetic screening, egg donation, EmbryoScope. Success rates, costs, legal framework, and JCI-accredited fertility centres.',
+        excerpt: 'Everything international couples need to know about IVF in Istanbul — ICSI, genetic screening, egg donation, success rates, and how to choose a JCI-accredited fertility centre.',
+        content: [
+          { type: 'p', text: 'Istanbul has emerged as a leading destination for assisted reproduction, combining advanced embryology laboratories, professor-supervised protocols, and significantly lower costs than Western Europe. Turkish fertility centres offer IVF, ICSI, PGD/PGS genetic screening, egg donation, and EmbryoScope time-lapse monitoring — technologies that are restricted or unavailable in several European countries.' },
+          { type: 'h2', text: 'IVF and ICSI: How Treatment Works' },
+          { type: 'p', text: 'In vitro fertilisation (IVF) fertilises eggs with sperm in a laboratory. ICSI (Intracytoplasmic Sperm Injection) injects a single sperm directly into each egg — essential for male factor infertility. At NodensCare partner centres, embryologists use EmbryoScope incubators for continuous time-lapse monitoring without removing embryos, improving selection of the healthiest embryos for transfer.' },
+          { type: 'h2', text: 'PGD and PGS Genetic Screening' },
+          { type: 'p', text: 'PGD (Preimplantation Genetic Diagnosis) tests embryos for specific inherited conditions. PGS (Preimplantation Genetic Screening) identifies chromosomally normal embryos — reducing miscarriage risk and improving live birth rates, especially for women over 35. Next Generation Sequencing (NGS) provides the most comprehensive chromosomal analysis available.' },
+          { type: 'h2', text: 'How Long Do You Stay in Istanbul for IVF?' },
+          { type: 'p', text: 'A fresh IVF cycle with embryo transfer requires approximately 12–14 days: ovarian stimulation (8–12 days), egg retrieval, fertilisation, and embryo transfer. Frozen embryo transfer (FET) cycles require only 3–5 days in Istanbul. Remote monitoring with your home clinic can reduce travel for repeat cycles.' },
+          { type: 'h2', text: 'IVF Success Rates and Costs' },
+          { type: 'ul', items: ['Clinical pregnancy rate per transfer with PGS: 60–65% for patients under 38', 'IVF cycle cost in Istanbul: 40–60% less than UK or German clinics', 'Egg donation legally regulated under Turkish Ministry of Health', 'English-speaking reproductive endocrinology coordinators included'] },
+        ],
+        faq: [
+          { q: 'Is egg donation legal in Turkey?', a: 'Yes. Egg donation is legal and regulated in Turkey. All donor matching, genetic profiling, and legal procedures are managed by the partner IVF centre\'s dedicated legal team.' },
+          { q: 'What is the IVF success rate in Istanbul?', a: 'Top partner centres report 50–60% clinical pregnancy rate per cycle for women under 35. PGS-tested embryo transfers exceed 60–65% for qualifying patients.' },
+          { q: 'Can I do remote monitoring to reduce travel?', a: 'Yes. For repeat cycles and FET, your local clinic can perform monitoring ultrasounds and blood tests while the Istanbul team coordinates medication protocols remotely.' },
+        ],
+      },
+      fr: { title: 'FIV à Istanbul : PGD/PGS, ICSI et Guide Fertilité 2026', meta_title: 'FIV Istanbul Turquie | Guide PGD PGS — NodensCare', meta_description: 'Guide complet FIV à Istanbul.', excerpt: 'Guide FIV complet pour couples internationaux à Istanbul.', content: [{ type: 'p', text: 'Istanbul est une destination de premier plan pour la reproduction assistée avec des laboratoires d\'embryologie avancés et des coûts inférieurs à l\'Europe occidentale.' }], faq: [{ q: 'Le don d\'ovocytes est-il légal en Turquie ?', a: 'Oui, réglementé par le ministère turc de la Santé.' }] },
+      ar: { title: 'أطفال الأنابيب في إسطنبول: دليل الخصوبة 2026', meta_title: 'أطفال الأنابيب إسطنبول — NodensCare', meta_description: 'دليل شامل لأطفال الأنابيب في إسطنبول.', excerpt: 'كل ما يحتاجه الأزواج الدوليون معرفته عن أطفال الأنابيب في إسطنبول.', content: [{ type: 'p', text: 'أصبحت إسطنبول وجهة رائدة للإخصاب المساعد مع مختبرات متقدمة وتكاليف أقل بكثير من أوروبا.' }], faq: [{ q: 'هل التبرع بالبويضات قانوني في تركيا؟', a: 'نعم، منظم بموجب وزارة الصحة التركية.' }] },
+      es: { title: 'FIV en Estambul: PGD/PGS, ICSI y Guía de Fertilidad 2026', meta_title: 'FIV Estambul Turquía | Guía PGD PGS — NodensCare', meta_description: 'Guía completa de FIV en Estambul.', excerpt: 'Todo lo que las parejas internacionales necesitan saber sobre FIV en Estambul.', content: [{ type: 'p', text: 'Estambul es un destino líder en reproducción asistida con laboratorios avanzados y costos significativamente menores que Europa occidental.' }], faq: [{ q: '¿Es legal la donación de óvulos en Turquía?', a: 'Sí, regulada por el Ministerio de Salud turco.' }] },
+    },
+  },
+  {
+    slug: 'cancer-treatment',
+    category: 'Complex',
+    image_url: siteImages.cancerTreatment,
+    translations: {
+      en: {
+        title: 'Cancer Treatment in Istanbul: Oncology, Immunotherapy & Tumor Board Guide',
+        meta_title: 'Cancer Treatment Istanbul Turkey | Oncology Guide — NodensCare',
+        meta_description: 'Guide to cancer treatment in Istanbul: immunotherapy, targeted therapy, CyberKnife, TrueBeam, multidisciplinary Tumor Board. JCI hospitals, professor-led oncology.',
+        excerpt: 'Authoritative guide to oncology in Istanbul — immunotherapy, precision radiotherapy, Tumor Board review, and what international cancer patients should know before traveling.',
+        content: [
+          { type: 'p', text: 'For international cancer patients, access to timely diagnostics, multidisciplinary review, and modern treatment protocols can be life-critical. Istanbul\'s university hospitals provide PET-CT staging, molecular tumour profiling, immunotherapy, targeted smart drugs, and precision radiotherapy — at 50–70% lower cost than US or UK oncology centres, with no waiting lists.' },
+          { type: 'h2', text: 'Multidisciplinary Tumor Board Review' },
+          { type: 'p', text: 'Every complex cancer case at NodensCare partner hospitals is reviewed by a Tumor Board — a weekly panel of medical oncologists, radiation oncologists, surgeons, radiologists, and pathologists who agree on a unified treatment plan. This is the gold standard in oncology, practised at leading European cancer centres and available immediately in Istanbul.' },
+          { type: 'h2', text: 'Immunotherapy and Targeted Therapy' },
+          { type: 'p', text: 'Immunotherapy activates your immune system to recognise and destroy cancer cells. Targeted therapy focuses on specific molecular structures of tumours — fewer side effects and higher success rates than traditional chemotherapy in qualifying cases. NodensCare partner centres use the same FDA/EMA-approved agents available in Western Europe.' },
+          { type: 'h2', text: 'Precision Radiotherapy: CyberKnife and TrueBeam' },
+          { type: 'p', text: 'CyberKnife and TrueBeam STx deliver sub-millimetre radiation precision — destroying cancer DNA while protecting healthy tissue. Led by Prof. Dr. Esra Kaytan Sağlam, former Faculty Dean and internationally recognised radiotherapy expert at Istanbul University.' },
+          { type: 'h2', text: 'Getting a Second Opinion from Istanbul' },
+          { type: 'p', text: 'NodensCare facilitates remote second opinions from professor oncologists. Submit your pathology reports, imaging (CD/DICOM), and treatment history for review without traveling. If treatment in Istanbul is recommended, diagnostic workup can be completed within 48–72 hours of arrival.' },
+        ],
+        faq: [
+          { q: 'How quickly can treatment begin in Istanbul?', a: 'Full diagnostic workup (PET-CT, molecular profiling, Tumor Board review) typically completes within 48–72 hours of arrival. Treatment usually begins within the first week.' },
+          { q: 'Can I continue treatment at home after Istanbul?', a: 'Yes. Oncology coordinators prepare a continuity-of-care document for your home physician, including drug protocols, follow-up imaging schedules, and emergency contacts.' },
+          { q: 'Is this medical advice?', a: 'No. This guide is educational only. All treatment decisions require consultation with a qualified oncologist who has reviewed your complete case.' },
+        ],
+      },
+      fr: { title: 'Traitement du Cancer à Istanbul : Oncologie et Immunothérapie', meta_title: 'Cancer Istanbul — NodensCare', meta_description: 'Guide oncologie Istanbul.', excerpt: 'Guide sur le traitement du cancer à Istanbul.', content: [{ type: 'p', text: 'Les hôpitaux universitaires d\'Istanbul offrent une oncologie complète avec des plateaux tumoraux multidisciplinaires.' }], faq: [{ q: 'Est-ce un avis médical ?', a: 'Non. Contenu informatif uniquement.' }] },
+      ar: { title: 'علاج السرطان في إسطنبول: دليل الأورام والعلاج المناعي', meta_title: 'علاج السرطان إسطنبول — NodensCare', meta_description: 'دليل علاج السرطان في إسطنبول.', excerpt: 'دليل شامل لعلاج الأورام في إسطنبول.', content: [{ type: 'p', text: 'مستشفيات إسطنبول الجامعية تقدم علاجاً شامياً للسرطان مع مجالس أورام متعددة التخصصات.' }], faq: [{ q: 'هل هذا نصيحة طبية؟', a: 'لا. للمعلومات فقط.' }] },
+      es: { title: 'Tratamiento del Cáncer en Estambul: Oncología e Inmunoterapia', meta_title: 'Cáncer Estambul — NodensCare', meta_description: 'Guía oncología Estambul.', excerpt: 'Guía de tratamiento del cáncer en Estambul.', content: [{ type: 'p', text: 'Los hospitales universitarios de Estambul ofrecen oncología integral con juntas tumorales multidisciplinarias.' }], faq: [{ q: '¿Es consejo médico?', a: 'No. Solo informativo.' }] },
+    },
+  },
+  {
+    slug: 'mommy-makeover',
+    category: 'Plastic Surgery',
+    image_url: siteImages.mommyMakeover,
+    translations: {
+      en: {
+        title: 'Mommy Makeover in Istanbul: Complete Patient Guide 2026',
+        meta_title: 'Mommy Makeover Istanbul Turkey | Tummy Tuck + Breast Guide — NodensCare',
+        meta_description: 'Complete mommy makeover guide for Istanbul: tummy tuck, breast lift/augmentation, liposuction. Costs from €7,500, JCI hospitals, 10-day safety protocol.',
+        excerpt: 'Everything mothers need to know about mommy makeover surgery in Istanbul — combined tummy tuck, breast surgery, and liposuction with professor-led care.',
+        content: [
+          { type: 'p', text: 'A Mommy Makeover addresses post-pregnancy body changes in a single surgical session: excess abdominal skin, separated muscles (diastasis recti), breast volume loss or sagging, and stubborn fat deposits. Istanbul offers experienced plastic surgeons, JCI-accredited hospitals, and all-inclusive packages at 50–60% lower cost than the US or UK.' },
+          { type: 'h2', text: 'What Procedures Are Combined?' },
+          { type: 'ul', items: ['Abdominoplasty (tummy tuck): removes excess skin, repairs abdominal muscles', 'Breast augmentation, lift (mastopexy), or reduction — based on your goals', 'Liposuction 360°: contours waist, flanks, and back', 'Optional: BBL for gluteal enhancement using harvested fat'] },
+          { type: 'h2', text: 'Recovery and Istanbul Stay' },
+          { type: 'p', text: 'Mommy Makeover patients stay in Istanbul 10–14 nights under NodensCare\'s international safety protocol. Compression garments are worn for 6 weeks. Most patients return to desk work at 2–3 weeks and full activity at 8–12 weeks. Our coordinators provide daily wound checks and Fit-to-Fly clearance before departure.' },
+          { type: 'h2', text: 'Am I a Good Candidate?' },
+          { type: 'p', text: 'Ideal candidates have finished having children, are at a stable weight, are non-smokers, and are in good general health. Combined procedures are only performed when safe anaesthesia time parameters are met — your surgeon may recommend staging procedures if combined surgery exceeds safe limits.' },
+          { type: 'h2', text: 'Cost Comparison' },
+          { type: 'p', text: 'Mommy Makeover packages at NodensCare start from €7,500 all-inclusive (surgery, hospital, hotel, transfers). Comparable procedures in the USA cost $15,000–$25,000; in the UK £10,000–£18,000.' },
+        ],
+        faq: [
+          { q: 'Can I combine all procedures in one surgery?', a: 'Often yes, when anaesthesia time and medical safety parameters allow. Your surgeon assesses this during your free remote consultation with photos.' },
+          { q: 'How long is recovery?', a: '10–14 nights in Istanbul, then 2–3 weeks before desk work. Full activity resumes at 8–12 weeks.' },
+          { q: 'Will I have visible scars?', a: 'Abdominoplasty scar is placed low in the bikini line and fades over 12–18 months. Breast surgery scars depend on technique — your surgeon discusses placement during consultation.' },
+        ],
+      },
+      fr: { title: 'Mommy Makeover à Istanbul : Guide Complet 2026', meta_title: 'Mommy Makeover Istanbul — NodensCare', meta_description: 'Guide mommy makeover Istanbul.', excerpt: 'Guide complet du mommy makeover à Istanbul.', content: [{ type: 'p', text: 'Le Mommy Makeover traite les changements post-grossesse en une seule intervention chirurgicale à Istanbul.' }], faq: [{ q: 'Combien de temps de récupération ?', a: '10–14 nuits à Istanbul.' }] },
+      ar: { title: 'عملية الأم الشاملة في إسطنبول: دليل 2026', meta_title: 'Mommy Makeover إسطنبول — NodensCare', meta_description: 'دليل mommy makeover إسطنبول.', excerpt: 'دليل شامل لعملية الأم الشاملة في إسطنبول.', content: [{ type: 'p', text: 'تعالج عملية الأم الشاملة تغيرات ما بعد الحمل في جلسة جراحية واحدة في إسطنبول.' }], faq: [{ q: 'كم مدة التعافي؟', a: '10–14 ليلة في إسطنبول.' }] },
+      es: { title: 'Mommy Makeover en Estambul: Guía Completa 2026', meta_title: 'Mommy Makeover Estambul — NodensCare', meta_description: 'Guía mommy makeover Estambul.', excerpt: 'Guía completa del mommy makeover en Estambul.', content: [{ type: 'p', text: 'El Mommy Makeover aborda los cambios post-embarazo en una sola sesión quirúrgica en Estambul.' }], faq: [{ q: '¿Cuánto tiempo de recuperación?', a: '10–14 noches en Estambul.' }] },
+    },
+  },
+  {
+    slug: 'all-on-6',
+    category: 'Dental',
+    image_url: siteImages.allOn6,
+    translations: {
+      en: {
+        title: 'All-on-6 Dental Implants in Istanbul: Full-Arch Restoration Guide',
+        meta_title: 'All-on-6 Dental Implants Istanbul | Full Arch Guide — NodensCare',
+        meta_description: 'Complete All-on-6 guide: full arch fixed bridge, immediate loading, €6,200 per arch. Nobel Biocare/Straumann, JCI hospitals, 7-day Istanbul stay.',
+        excerpt: 'Everything patients need to know about All-on-6 full-arch dental implants in Istanbul — procedure, costs, immediate loading, and choosing a safe implant centre.',
+        content: [
+          { type: 'p', text: 'All-on-6 replaces a full arch of missing or failing teeth with a fixed porcelain bridge supported by six strategically placed titanium implants. Unlike removable dentures, the bridge is permanent, stable, and functions like natural teeth. Istanbul offers this procedure at €6,200 per arch — compared to £12,000–£16,000 in the UK.' },
+          { type: 'h2', text: 'All-on-6 vs All-on-4' },
+          { type: 'p', text: 'All-on-6 uses six implants for superior load distribution — critical for patients with bone loss, bruxism, or those seeking maximum long-term stability. All-on-4 uses four implants and suits selected cases with adequate bone volume. Your prosthodontist recommends the optimal approach after 3D CT scan analysis.' },
+          { type: 'h2', text: 'Same-Day Teeth: Immediate Loading' },
+          { type: 'p', text: 'Qualified patients receive a fixed temporary bridge on the day of surgery — you leave the clinic with functional teeth. The final zirconia or E-max bridge is fitted at a follow-up visit 4–6 months later, after implants have integrated with the jawbone.' },
+          { type: 'h2', text: 'What the Package Includes' },
+          { type: 'ul', items: ['3D CT scan and full treatment planning', '6 premium titanium implants per arch (Nobel Biocare / Straumann)', 'Immediate fixed temporary bridge', 'Final zirconia or E-max fixed bridge at follow-up', '7-day Istanbul stay with hotel and transfers', 'Lifetime warranty on implant materials'] },
+        ],
+        faq: [
+          { q: 'How long do All-on-6 implants last?', a: 'With proper care and regular check-ups, implants can last 20+ years. The fixed bridge may require replacement after 10–15 years depending on wear.' },
+          { q: 'Is the procedure painful?', a: 'Surgery is performed under local anaesthesia or sedation. Most patients report pressure rather than pain. Post-operative discomfort is managed with standard medication.' },
+          { q: 'Can seniors get All-on-6?', a: 'Yes, age alone is not a contraindication. Bone density, general health, and medication profile are assessed during consultation.' },
+        ],
+      },
+      fr: { title: 'All-on-6 Implants Dentaires à Istanbul : Guide Complet', meta_title: 'All-on-6 Istanbul — NodensCare', meta_description: 'Guide All-on-6 Istanbul.', excerpt: 'Guide complet des implants All-on-6 à Istanbul.', content: [{ type: 'p', text: 'All-on-6 remplace une arcade complète de dents manquantes par un bridge fixe sur six implants titane.' }], faq: [{ q: 'Combien de temps durent les implants ?', a: '20+ ans avec des soins appropriés.' }] },
+      ar: { title: 'زراعة All-on-6 في إسطنبول: دليل الترميم الكامل', meta_title: 'All-on-6 إسطنبول — NodensCare', meta_description: 'دليل All-on-6 إسطنبول.', excerpt: 'دليل شامل لزراعة All-on-6 في إسطنبول.', content: [{ type: 'p', text: 'يستبدل All-on-6 أسنان الفك الكامل بجسر ثابت على ست زرعات تيتانيوم.' }], faq: [{ q: 'كم تدوم الزرعات؟', a: 'أكثر من 20 سنة مع العناية المناسبة.' }] },
+      es: { title: 'All-on-6 Implantes Dentales en Estambul: Guía Completa', meta_title: 'All-on-6 Estambul — NodensCare', meta_description: 'Guía All-on-6 Estambul.', excerpt: 'Guía completa de implantes All-on-6 en Estambul.', content: [{ type: 'p', text: 'All-on-6 reemplaza un arco completo de dientes perdidos con un puente fijo sobre seis implantes de titanio.' }], faq: [{ q: '¿Cuánto duran los implantes?', a: 'Más de 20 años con cuidado adecuado.' }] },
     },
   },
 ];
