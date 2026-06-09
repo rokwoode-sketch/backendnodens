@@ -16,6 +16,7 @@ export const DB_HOSTS = ['database', 'nodenscare_database', 'postgres', 'localho
 
 const pool = new Pool({
   connectionString: getConnectionString(),
+  connectionTimeoutMillis: 5000,
   ssl: process.env.DATABASE_SSL === 'true' ? { rejectUnauthorized: false } : false,
 });
 
