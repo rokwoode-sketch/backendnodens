@@ -1,0 +1,32 @@
+import { query } from './db.js';
+import { posts } from './posts-data.js';
+
+export default async function runSeed() {
+  for (const post of posts) {
+    const existing = await query('SELECT id FROM blog_posts WHERE slug = $1', [post.slug]);
+    let postId;
+    if (existing.rows.length === 0) {
+      const inserted = await query(
+        'INSERT INTO blog_posts (slug, category, image_url) VALUES ($1, $2, $3) RETURNING id',
+        [post.slug, post.category, post.image_url]
+      );
+      postId = inserted.rows[0].id;
+    } else {
+      postId = existing.rows[0].id;
+    }
+    for (const [lang, t] of Object.entries(post.translations)) {
+      await query(
+        `INSERT INTO blog_post_translations
+          (post_id, lang, title, meta_title, meta_description, excerpt, content, faq)
+         VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+         ON CONFLICT (post_id, lang) DO UPDATE SET
+          title=EXCLUDED.title, meta_title=EXCLUDED.meta_title,
+          meta_description=EXCLUDED.meta_description, excerpt=EXCLUDED.excerpt,
+          content=EXCLUDED.content, faq=EXCLUDED.faq`,
+        [postId, lang, t.title, t.meta_title, t.meta_description, t.excerpt,
+         JSON.stringify(t.content), JSON.stringify(t.faq)]
+      );
+    }
+  }
+  console.log('DB seeded');
+}
