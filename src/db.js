@@ -2,8 +2,20 @@ import pg from 'pg';
 
 const { Pool } = pg;
 
+export function getConnectionString() {
+  if (process.env.DATABASE_URL) return process.env.DATABASE_URL;
+  const host = process.env.DB_HOST || 'database';
+  const user = process.env.DB_USER || 'postgres';
+  const pass = process.env.DB_PASSWORD || '';
+  const db = process.env.DB_NAME || 'nodenscare';
+  const port = process.env.DB_PORT || '5432';
+  return `postgresql://${user}:${pass}@${host}:${port}/${db}`;
+}
+
+export const DB_HOSTS = ['database', 'nodenscare_database', 'postgres', 'localhost'];
+
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: getConnectionString(),
   ssl: process.env.DATABASE_SSL === 'true' ? { rejectUnauthorized: false } : false,
 });
 
