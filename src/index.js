@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { initSchema, query } from './db.js';
+import { initSchema, query, DB_HOSTS } from './db.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -47,18 +47,29 @@ app.get('/api/posts/:slug', async (req, res) => {
   }
 });
 
-async function connectDb(retries = 10) {
-  for (let i = 1; i <= retries; i++) {
-    try {
-      await initSchema();
-      console.log('Database connected');
-      return true;
-    } catch (err) {
-      console.warn(`DB connect attempt ${i}/${retries}: ${err.message}`);
-      await new Promise((r) => setTimeout(r, 3000));
+async function connectDb() {
+  const user = process.env.DB_USER || 'postgres';
+  const pass = process.env.DB_PASSWORD || process.env.DATABASE_URL?.match(/:(.+?)@/)?.[1] || '';
+  const db = process.env.DB_NAME || 'nodenscare';
+  const hosts = process.env.DATABASE_URL
+    ? [process.env.DATABASE_URL.match(/@([^:/]+)/)?.[1] || 'database']
+    : DB_HOSTS;
+
+  for (const host of hosts) {
+    process.env.DATABASE_URL = `postgresql://${user}:${pass}@${host}:5432/${db}`;
+    console.log(`Trying DB host: ${host}`);
+    for (let i = 1; i <= 10; i++) {
+      try {
+        await initSchema();
+        console.log(`Database connected via ${host}`);
+        return true;
+      } catch (err) {
+        console.warn(`DB attempt ${i} (${host}): ${err.message}`);
+        await new Promise((r) => setTimeout(r, 2000));
+      }
     }
   }
-  console.warn('No DATABASE_URL — API will return errors');
+  console.warn('Database unavailable — API will return errors');
   return false;
 }
 
