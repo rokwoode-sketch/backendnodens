@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { initSchema, query, DB_HOSTS } from './db.js';
+import { posts } from './posts-data.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -27,9 +28,27 @@ app.get('/api/posts', async (req, res) => {
   }
 });
 
+function getStaticPost(slug, lang) {
+  const post = posts.find((p) => p.slug === slug);
+  if (!post) return null;
+  const t = post.translations[lang] || post.translations.en;
+  return {
+    slug: post.slug,
+    category: post.category,
+    image_url: post.image_url,
+    published_at: new Date().toISOString(),
+    title: t.title,
+    meta_title: t.meta_title,
+    meta_description: t.meta_description,
+    excerpt: t.excerpt,
+    content: t.content,
+    faq: t.faq,
+  };
+}
+
 app.get('/api/posts/:slug', async (req, res) => {
+  const lang = req.query.lang || 'en';
   try {
-    const lang = req.query.lang || 'en';
     const result = await query(
       `SELECT p.slug, p.category, p.image_url, p.published_at,
               t.title, t.meta_title, t.meta_description, t.excerpt, t.content, t.faq
@@ -38,13 +57,13 @@ app.get('/api/posts/:slug', async (req, res) => {
        WHERE p.slug = $2`,
       [lang, req.params.slug]
     );
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'Post not found' });
-    }
-    res.json(result.rows[0]);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+    if (result.rows.length > 0) return res.json(result.rows[0]);
+  } catch {
+    // DB unavailable — serve static fallback
   }
+  const staticPost = getStaticPost(req.params.slug, lang);
+  if (!staticPost) return res.status(404).json({ error: 'Post not found' });
+  res.json(staticPost);
 });
 
 async function connectDb() {
@@ -74,8 +93,10 @@ async function connectDb() {
 }
 
 async function start() {
-  if (process.env.DATABASE_URL) await connectDb();
   app.listen(PORT, '0.0.0.0', () => console.log(`API running on port ${PORT}`));
+  if (process.env.DATABASE_URL || process.env.DB_PASSWORD) {
+    connectDb().catch((err) => console.warn('Background DB connect failed:', err.message));
+  }
 }
 
 start().catch((err) => {
